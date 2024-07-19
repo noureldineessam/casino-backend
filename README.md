@@ -1,6 +1,6 @@
 
 
-# 🎉 ** Casino Management System with a Funky Twist** 🎉
+# 🎉 Casino Management System with a Funky Twist 🎉
 
 Welcome to the **Casino Management System**! 🎸 This cool project combines the power of modern TypeScript with the grooviness of Prisma and Express. Whether you’re rolling slots or managing user histories, this system has got you covered.
 
