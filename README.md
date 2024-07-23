@@ -6,7 +6,7 @@ Welcome to the **Casino Management System**! 🎸 This cool project combines the
 
 ## 🌟 **Features** 🌟
 
-- **Get Funky with Users**: Retrieve, create, update, and delete users.
+- **Get Funky with Users**: Retrieve, create, and delete users.
 - **Cashout Coolness**: Cashout from user balances with style.
 - **Roll the Dice**: Engage in a wild roll and win rewards!
 - **Track the Beat**: View user history with smooth transactions.
