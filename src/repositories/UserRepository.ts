@@ -1,5 +1,4 @@
 import { User } from '../models/User/User';
-import { UserUpdateDTO } from '../models/User/dto/UserUpdateDTO';
 import { IUserRepository } from '../interfaces/IUserRepository';
 
 import { PrismaClient } from '@prisma/client'

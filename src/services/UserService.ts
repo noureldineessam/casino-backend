@@ -1,4 +1,6 @@
 import { User } from '../models/User/User';
+import { History } from '../models/History/History';
+
 import { IUserRepository } from '../interfaces/IUserRepository';
 
 import { UserSummaryDTO } from '../models/User/dto/UserSummaryDTO';
@@ -153,6 +155,7 @@ export class UserService {
      * Update balance after roll.
      * @param id - The ID of the user to deposit.
      * @param amount - The amount.
+     * @returns {Promise<UserSummaryDTO | null>} The updated balance, null if not found.
      */
     async updateBalanceAfterRoll(id: string, amount: number): Promise<UserSummaryDTO | null> {
         try {
@@ -167,8 +170,9 @@ export class UserService {
     /**
      * Get User History.
      * @param id - The ID of the user.
+     * @returns {Promise<History[]>} The user history.
      */
-    async getHistoryByUserId(id: string): Promise<any> {
+    async getHistoryByUserId(id: string): Promise<History[]> {
         try {
             logger.info('Fetching user history', { id: id });
             return await this.historyService.getHistoryByUserId(id);

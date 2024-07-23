@@ -78,7 +78,7 @@ export class UserController {
     }
 
     /**
-     * Handles HTTP POST requests to login a user by its ID.
+     * Handles HTTP PUT requests to login a user by its ID.
      * Validates the URL parameters, logs in the user using its ID, 
      * and responds with a status code indicating successful login. Passes errors to the next middleware if it fails.
      * @param req - The HTTP request object.
@@ -99,7 +99,7 @@ export class UserController {
     }
 
     /**
-     * Handles HTTP POST requests to logout a user by its ID.
+     * Handles HTTP PUT requests to logout a user by its ID.
      * Validates the URL parameters, logs out the user using its ID, 
      * and responds with a status code indicating successful logout. Passes errors to the next middleware if it fails.
      * @param req - The HTTP request object.
@@ -120,7 +120,7 @@ export class UserController {
     }
 
     /**
-     * Handles HTTP POST requests to cashout a user by its ID.
+     * Handles HTTP PUT requests to cashout a user by its ID.
      * Validates the URL parameters, cashout the user using its ID, 
      * and responds with a status code indicating successful cashout. Passes errors to the next middleware if it fails.
      * @param req - The HTTP request object.
@@ -146,7 +146,7 @@ export class UserController {
     }
 
     /**
-     * Handles HTTP POST requests to get user history.
+     * Handles HTTP GET requests to get user history.
      * Validates the URL parameters, get user history using its ID,
      * and responds with a JSON object of the user history if successful. Passes errors to the next middleware if it fails.
      * @param req - The HTTP request object.

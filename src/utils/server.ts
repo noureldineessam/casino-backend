@@ -7,7 +7,7 @@ export const startServer = async (app: express.Application, port: number) => {
             logger.info(`Server is running on port ${port}`);
         });
     } catch (error) {
-        logger.error('Failed to connect to MongoDB, shutting down the server', { error });
+        logger.error('Failed to connect to Database, shutting down the server', { error });
         process.exit(1);
     }
 };

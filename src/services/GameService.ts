@@ -1,14 +1,9 @@
 import { User } from '../models/User/User';
 import { IUserRepository } from '../interfaces/IUserRepository';
 import { IGameService } from '../interfaces/IGameService';
-import { IHistoryRepository } from '../interfaces/IHistoryRepository';
 import { PrismaClient, TransactionType } from '@prisma/client';
 import { HistoryService } from '../services/HistoryService';
-import { UserRepository } from '../repositories/UserRepository';
 import { UserService } from '../services/UserService';
-
-import { HistoryRepository } from '../repositories/HistoryRepository';
-
 
 
 const prisma = new PrismaClient();
@@ -27,7 +22,8 @@ export class GameService implements IGameService {
     // private userService = new UserService(new UserRepository());
 
     /**
-     * Retrieves all users and returns them as UserSummaryDTO.
+     * Rolls the slots for the user with the given ID.
+     * @param id - The ID of the user.
      * @returns {Promise<any>}.
      */
     async roll(id: string): Promise<any> {

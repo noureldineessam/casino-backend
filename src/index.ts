@@ -31,7 +31,6 @@ if (ENV === 'development') {
     app.use(morgan('combined'));
 }
 
-// app.use(WaitDatabaseConnection);
 app.use(`/api/users`, UsersRouter)
 app.use(`/api/game`, GameRouter)
 app.use(ErrorHandler);

@@ -4,8 +4,6 @@ import { User } from '../models/User/User';
 
 // Define allowed query parameters and their validation rules
 const ALLOWED_PARAMS = {
-    page: (value: any) => isInt(value), // Page numbers should be integers
-    limit: (value: any) => isInt(value), // Limit should be integers
     id: (value: any) => isString(value) && matches(value, /^[a-zA-Z0-9]+$/), // id validation to not have special characters
     amountToCashout: (value: any) => isInt(value)
 };

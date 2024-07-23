@@ -1,6 +1,5 @@
 import { GameService } from '../services/GameService';
 import { IUserRepository } from '../interfaces/IUserRepository';
-import { IHistoryRepository } from '../interfaces/IHistoryRepository';
 import { User } from '../models/User/User';
 import { UserService } from '../services/UserService';
 import { HistoryService } from '../services/HistoryService';

@@ -1,7 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import { UserService } from '../services/UserService';
-import { validateUserParams, validateUrlParams } from '../validators/Validator';
-import { checkResourceUnavalibility } from '../utils/checkResourceUnavalibility';
 import { GameService } from '../services/GameService';
 
 export class GameController {

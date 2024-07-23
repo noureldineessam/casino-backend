@@ -1,11 +1,6 @@
-import { User } from '../models/User/User';
-import { IUserRepository } from '../interfaces/IUserRepository';
-import { IGameService } from '../interfaces/IGameService';
 import { IHistoryRepository } from '../interfaces/IHistoryRepository';
 import { PrismaClient, TransactionType } from '@prisma/client';
 
-
-const prisma = new PrismaClient();
 
 
 import { logger } from '../utils/logger';
@@ -15,6 +10,13 @@ export class HistoryService {
         private historyRepository: IHistoryRepository
     ) { }
 
+    /**
+     * Logs a transaction for the user with the given ID.
+     * @param userId - The ID of the user.
+     * @param amount - The amount of the transaction.
+     * @param transactionType - The type of the transaction.
+     * @returns {Promise<null>}.
+     */
     async logTransaction(userId: string, amount: number, transactionType: TransactionType): Promise<null> {
         try {
             logger.info('Logging transaction');
@@ -27,6 +29,11 @@ export class HistoryService {
         }
     }
 
+    /**
+     * Retrieves the history for the user with the given ID.
+     * @param userId - The ID of the user.
+     * @returns {Promise<any>}.
+     */
     async getHistoryByUserId(userId: string): Promise<any> {
         try {
             logger.info('Fetching history');

@@ -1,5 +1,4 @@
-import { IsString, IsInt, IsDate, IsOptional, } from 'class-validator';
-import { PrismaClient, TransactionType } from '@prisma/client';
+import { TransactionType } from '@prisma/client';
 
 
 export class History {

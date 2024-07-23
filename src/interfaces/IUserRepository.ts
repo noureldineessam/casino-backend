@@ -8,7 +8,6 @@ export interface IUserRepository {
     /**
      * Retrieves a user by its ID.
      * @param id - The ID of the user to retrieve.
-     * @returns {Promise<User | null>} A promise that resolves to the `User` object if found, or `null` if not found.
      */
     findById(id: string): Promise<User | null>;
 
@@ -40,7 +39,6 @@ export interface IUserRepository {
     /**
      * Chashout from user balance.
      * @param id - The ID of the user to logout.
-     * @param amountToCashout - The amount to cashout.
      */
     cashout(id: string): Promise<User | null>;
 
