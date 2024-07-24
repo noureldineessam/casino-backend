@@ -13,7 +13,7 @@ import { logger } from '../utils/logger';
 
 export class GameService implements IGameService {
     constructor(
-        private userRepository: IUserRepository,
+        // private userRepository: IUserRepository,
         private historyService: HistoryService,
         private userService: UserService
     ) { }
@@ -100,7 +100,7 @@ export class GameService implements IGameService {
     }
 
     private async shouldReRoll(id: string, result: string[]): Promise<boolean> {
-        const user = await this.userRepository.findById(id) as User;
+        const user = await this.userService.getUserById(id) as User;
         const randomInt = Math.floor(Math.random() * 10); // Generates a random integer between 0 and 9
         if (user.balance >= 60) {
             return randomInt < 6; // 60% chance

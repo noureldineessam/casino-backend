@@ -12,7 +12,7 @@ import { HistoryRepository } from '../repositories/HistoryRepository';
 const router = express.Router();
 
 const gameService = new GameService(
-    new UserRepository(),
+    // new UserRepository(),
     new HistoryService(new HistoryRepository()),
     new UserService(new UserRepository())
 );

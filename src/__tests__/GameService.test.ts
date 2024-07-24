@@ -38,7 +38,7 @@ describe('GameService', () => {
 
     beforeEach(() => {
         gameService = new GameService(
-            mockUserRepository as IUserRepository,
+            // mockUserRepository as IUserRepository,
             mockHistoryService as HistoryService,
             mockUserService as UserService
         );
